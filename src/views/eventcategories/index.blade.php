@@ -5,7 +5,7 @@
 @section('page-title', 'Event Category')
 
 @section('breadcrumb')
-<li><a href="{{ route('admin.events.index') }}">Events</a></li>
+<li><a href="{{ route('events.index') }}">Events</a></li>
 <li class="active">Event Category</a></li>
 @endsection
 
@@ -19,7 +19,7 @@
                 <h3 class="box-title">Add event category</h3>
             </div>
 
-            {!! Form::open(['route' => 'admin.eventcategories.store', 'class' => 'event-category-form']) !!}
+            {!! Form::open(['route' => 'eventcategories.store', 'class' => 'event-category-form']) !!}
                 <div class="box-body">
                     <div class="form-group">
                         {!! Form::label('title', 'Title') !!}
@@ -52,7 +52,7 @@
                             <tr>
                                 <td>{{ $category->title }}</td>
                                 <td class="text-center">
-                                    {!! Form::open(['route' => ['admin.eventcategories.destroy', $category->id], 'method' => 'DELETE', 'data-confirm' => 'Are you sure you want to delete this event category?']) !!}
+                                    {!! Form::open(['route' => ['eventcategories.destroy', $category->id], 'method' => 'DELETE', 'data-confirm' => 'Are you sure you want to delete this event category?']) !!}
                                         <button type="button" class="btn btn-primary btn-sm category-edit" data-toggle="modal" data-target-id="{{ $category->id }}" data-target="#edit-modal"><i class="fa fa-edit "></i></button>
 
                                         <button data-toggle="tooltip" title="Delete" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>

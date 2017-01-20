@@ -1,4 +1,4 @@
-{!! Form::model($category, ['route' => ['admin.eventcategories.update', $category->id], 'method' => 'PATCH', 'class' => 'event-category-form']) !!}
+{!! Form::model($category, ['route' => ['eventcategories.update', $category->id], 'method' => 'PATCH', 'class' => 'event-category-form']) !!}
     <div class="box-body">
         <div class="form-group">
             {!! Form::label('title', 'Title') !!}
