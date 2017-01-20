@@ -3,11 +3,14 @@
 namespace Taggers\Events\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Taggers\Events\Models\EventCategory;
-use Taggers\Events\Controllers\Controller;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class EventCategoriesController extends Controller
 {
+    use ValidatesRequests;
+    
     /**
      * Display a listing of the resource.
      *
