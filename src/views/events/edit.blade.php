@@ -5,14 +5,14 @@
 @section('page-title', 'Edit Event')
 
 @section('breadcrumb')
-<li><a href="{{ route('admin.events.index') }}">Events</a></li>
+<li><a href="{{ route('events.index') }}">Events</a></li>
 <li class="active">Add Event</a></li>
 @endsection
 
 @section('content')
 
 <div class="row">
-    {!! Form::model($event, ['route' => ['admin.events.update', $event->id], 'method' => 'PATCH', 'class' => 'event-form', 'files' => true]) !!}
+    {!! Form::model($event, ['route' => ['events.update', $event->id], 'method' => 'PATCH', 'class' => 'event-form', 'files' => true]) !!}
     <div class="col-sm-12 col-md-8">
 
         <div class="box box-primary">

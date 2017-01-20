@@ -5,14 +5,14 @@
 @section('page-title', 'Add Event')
 
 @section('breadcrumb')
-<li><a href="{{ route('admin.events.index') }}">events</a></li>
+<li><a href="{{ route('events.index') }}">events</a></li>
 <li class="active">Add event</a></li>
 @endsection
 
 @section('content')
 
 <div class="row">
-    {!! Form::open(['route' => 'admin.events.store', 'class' => 'event-form', 'files' => true]) !!}
+    {!! Form::open(['route' => 'events.store', 'class' => 'event-form', 'files' => true]) !!}
     <div class="col-sm-12 col-md-8">
 
         <div class="box box-primary">

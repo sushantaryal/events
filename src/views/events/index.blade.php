@@ -5,7 +5,7 @@
 @section('page-title', 'List All Events')
 
 @section('breadcrumb')
-<li><a href="{{ route('admin.events.index') }}">Events</a></li>
+<li><a href="{{ route('events.index') }}">Events</a></li>
 <li class="active">All Events</a></li>
 @endsection
 
@@ -36,8 +36,8 @@
                                 <td>{{ $event->categoryString() }}</td>
                                 <td>{!! $event->statusString() !!}</td>
                                 <td class="text-center">
-                                    {!! Form::open(['route' => ['admin.events.destroy', $event->id], 'method' => 'DELETE', 'data-confirm' => 'Are you sure you want to delete this event?']) !!}
-                                        <a data-toggle="tooltip" title="Edit" href="{{ route('admin.events.edit', $event->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                    {!! Form::open(['route' => ['events.destroy', $event->id], 'method' => 'DELETE', 'data-confirm' => 'Are you sure you want to delete this event?']) !!}
+                                        <a data-toggle="tooltip" title="Edit" href="{{ route('events.edit', $event->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
                                         <button data-toggle="tooltip" title="Delete" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
                                     {!! Form::close() !!}
                                 </td>
