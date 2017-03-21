@@ -11,12 +11,19 @@ class Event extends Model
     use Sluggable;
 
     /**
+	 * The attributes that should be mutated to dates.
+	 *
+	 * @var array
+	 */
+	protected $dates = ['event_date', 'end_date'];
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'title', 'slug', 'event_date', 'image', 'image_thumb', 'description', 'status',
+        'title', 'slug', 'event_date', 'end_date', 'image', 'image_thumb', 'description', 'status',
     ];
 
     /**

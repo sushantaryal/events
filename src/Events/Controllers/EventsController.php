@@ -52,6 +52,7 @@ class EventsController extends Controller
         $event = new Event;
         $event->title       = $request->input('title');
         $event->event_date  = $request->input('event_date');
+        $event->end_date    = $request->input('end_date');
         $event->description = $request->input('description');
         $event->status      = $request->input('status');
 
@@ -113,6 +114,7 @@ class EventsController extends Controller
         $event = Event::find($id);
         $event->title       = $request->input('title');
         $event->event_date  = $request->input('event_date');
+        $event->end_date    = $request->input('end_date');
         $event->description = $request->input('description');
         $event->status      = $request->input('status');
 

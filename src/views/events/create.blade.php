@@ -32,6 +32,11 @@
                 </div>
 
                 <div class="form-group">
+                    {!! Form::label('end_date', 'Event End Date') !!}
+                    {!! Form::text('end_date', null, ['class' => 'form-control', 'placeholder' => 'Enter event date here']) !!}
+                </div>
+
+                <div class="form-group">
                     {!! Form::label('description', 'Description') !!}
                     {!! Form::textarea('description', null, ['class' => 'form-control summernote', 'placeholder' => 'Enter title here']) !!}
                 </div>
@@ -102,6 +107,10 @@
         $("#categories").select2();
 
         $('#event_date').datetimepicker({
+            format: 'YYYY-MM-DD'
+        });
+
+        $('#end_date').datetimepicker({
             format: 'YYYY-MM-DD'
         });
 
